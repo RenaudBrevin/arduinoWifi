@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jeu de Plateforme à Défilement Automatique</title>
+  <style>
+    body { margin: 0; }
+    .game {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      background: url('https://i.redd.it/86yagye25g841.png') repeat-x;
+      background-size: cover;
+    }
+    .player, .enemy, .ground { position: absolute; }
+    .player {
+      border: 2px solid rgb(151, 167, 0);
+      background-color: white;
+      border-radius: 4px;
+    }
+    .enemy {
+      border-radius: 4px;
+      background-color: black;
+      border: 2px solid rgb(0, 10, 201);
+    }
+    .ground {
+      width: 100%;
+      bottom: 0;
+      background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,1) 31%, rgba(255,0,0,1) 100%);
+      outline: 4px solid black;
+    }
+    .score {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: white;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="game"></div>
+  <script src="game.js"></script>
+</body>
+</html>
